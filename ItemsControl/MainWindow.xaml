@@ -10,21 +10,25 @@
 
     <Grid  >
 
-        <!--<StackPanel Visibility="Visible" >
+        <StackPanel x:Name="login" Visibility="Visible">
             <StackPanel.Background>
-                <ImageBrush ImageSource="C:\Users\Kyle\source\repos\ItemsControl\ItemsControl\Background\image.png"/>
+                <ImageBrush ImageSource="C:\Users\23-0438c\source\repos\ItemsControl\ItemsControl\Background\Login.png"/>
             </StackPanel.Background>
 
-            <StackPanel Margin="700 80 0 0" Width="60" Height="300" Orientation="Vertical" >
-                <Button Margin="0 5 0 0" BorderBrush="Transparent" Background="Transparent" Width="50" Height="50" Click="Shopping_Click" />
-                <Button Margin="0 30 0 0" BorderBrush="Transparent" Background="Transparent" Width="45" Height="50" Click="Selling_Click"  />
-                <Button Margin="0 40 0 0" BorderBrush="Transparent" Background="Transparent" Width="42" Height="35" Click="Contact_Click"  />
-                <Button Margin="0 43 0 0" BorderBrush="Transparent" Background="Transparent" Width="50" Height="40" Click="Logout_Click"  />
-            </StackPanel>
-            
-        </StackPanel>-->
+            <TextBox x:Name ="user_box" Margin="0 210 20 0" BorderBrush="Transparent" Background="Transparent" Width="190" Height="23" BorderThickness="0"  />
+            <TextBox x:Name ="pass_box" Margin="0 40 20 0" BorderBrush="Transparent" Background="Transparent" Width="190" Height="23" BorderThickness="0"  />
+            <Button x:Name="Signin_btn" Content=" " Margin="0,14,20,0" BorderBrush="Transparent" Background="Transparent" Width="200" Height="23" Click="SignIn">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="3" Background="Transparent" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
 
-        <Grid x:Name="listedItems" Visibility="Visible">
+        <Grid x:Name="listedItems" Visibility="Collapsed">
             <Grid.Background>
                 <ImageBrush ImageSource="C:\Users\23-0438c\source\repos\ItemsControl\ItemsControl\Background\Shopping.png"/>
             </Grid.Background>
